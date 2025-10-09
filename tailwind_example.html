@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS 示例 - 现代化响应式网页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-indigo-600">TailwindCSS</h1>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#" class="text-gray-900 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">首页</a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">产品</a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">服务</a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium">关于</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">
+                        联系我们
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- Hero 区域 -->
+        <section class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        使用 TailwindCSS 构建
+                        <span class="block text-yellow-300">现代化网站</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-indigo-100">
+                        功能类优先的 CSS 框架，让开发更高效，设计更灵活
+                    </p>
+                    <div class="space-x-4">
+                        <button class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                            开始学习
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition duration-300">
+                            查看示例
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特性展示区域 -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">核心特性</h2>
+                    <p class="text-xl text-gray-600">TailwindCSS 为现代 Web 开发提供强大支持</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 特性卡片 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">快速开发</h3>
+                        <p class="text-gray-600">通过预定义的工具类，无需编写大量自定义 CSS，快速构建界面。</p>
+                    </div>
+
+                    <!-- 特性卡片 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">响应式设计</h3>
+                        <p class="text-gray-600">内置响应式类名，轻松构建适配各种设备的响应式布局。</p>
+                    </div>
+
+                    <!-- 特性卡片 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition duration-300">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">高度定制</h3>
+                        <p class="text-gray-600">完全可定制的配置系统，根据项目需求自定义主题和样式。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 响应式展示区域 -->
+        <section class="py-20 bg-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">响应式展示</h2>
+                    <p class="text-xl text-gray-600">在不同设备上查看布局变化</p>
+                </div>
+
+                <!-- 响应式网格 -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="w-full h-32 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg mb-4"></div>
+                        <h3 class="text-lg font-semibold mb-2">移动优先</h3>
+                        <p class="text-gray-600 text-sm">默认样式针对移动设备优化</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="w-full h-32 bg-gradient-to-r from-green-400 to-green-600 rounded-lg mb-4"></div>
+                        <h3 class="text-lg font-semibold mb-2">平板适配</h3>
+                        <p class="text-gray-600 text-sm">在小屏幕上自动调整布局</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="w-full h-32 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg mb-4"></div>
+                        <h3 class="text-lg font-semibold mb-2">桌面优化</h3>
+                        <p class="text-gray-600 text-sm">大屏幕显示更多内容</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="w-full h-32 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg mb-4"></div>
+                        <h3 class="text-lg font-semibold mb-2">大屏体验</h3>
+                        <p class="text-gray-600 text-sm">超宽屏幕充分利用空间</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 表单示例 -->
+        <section class="py-20 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">联系我们</h2>
+                    <p class="text-gray-600">使用 TailwindCSS 样式化的表单</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="first_name" class="block text-sm font-medium text-gray-700 mb-2">姓名</label>
+                            <input type="text" id="first_name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="请输入您的姓名">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">邮箱</label>
+                            <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="请输入您的邮箱">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">主题</label>
+                        <input type="text" id="subject" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="请输入主题">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">消息</label>
+                        <textarea id="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="请输入您的消息"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-md transition duration-300 transform hover:scale-105">
+                        发送消息
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">TailwindCSS</h3>
+                    <p class="text-gray-400">功能优先的 CSS 框架，让开发更高效。</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">文档</a></li>
+                        <li><a href="#" class="hover:text-white">示例</a></li>
+                        <li><a href="#" class="hover:text-white">博客</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <p class="text-gray-400">邮箱: info@tailwindcss.com</p>
+                    <p class="text-gray-400">电话: +86 123 4567 8900</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 TailwindCSS 示例. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为所有按钮添加点击效果
+            const buttons = document.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // 创建涟漪效果
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple');
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+    </script>
+
+    <style>
+        /* 自定义涟漪效果 */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</body>
+</html>
