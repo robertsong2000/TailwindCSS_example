@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精选商城 - 品质生活</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- 顶部导航栏 -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-orange-500">精选商城</h1>
+                    </div>
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition">首页</a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition">新品</a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition">热卖</a>
+                        <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition">特惠</a>
+                    </nav>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="hidden sm:block relative">
+                        <input type="text" placeholder="搜索商品" class="w-64 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                        <svg class="w-5 h-5 text-gray-400 absolute right-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <button class="relative p-2 text-gray-600 hover:text-orange-500 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 分类导航 -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-8 py-4 overflow-x-auto">
+                <button class="flex items-center space-x-2 text-orange-500 font-medium whitespace-nowrap">
+                    <span>全部商品</span>
+                </button>
+                <button class="flex items-center space-x-2 text-gray-600 hover:text-orange-500 transition whitespace-nowrap">
+                    <span>电子产品</span>
+                </button>
+                <button class="flex items-center space-x-2 text-gray-600 hover:text-orange-500 transition whitespace-nowrap">
+                    <span>服装服饰</span>
+                </button>
+                <button class="flex items-center space-x-2 text-gray-600 hover:text-orange-500 transition whitespace-nowrap">
+                    <span>家居生活</span>
+                </button>
+                <button class="flex items-center space-x-2 text-gray-600 hover:text-orange-500 transition whitespace-nowrap">
+                    <span>美妆护肤</span>
+                </button>
+                <button class="flex items-center space-x-2 text-gray-600 hover:text-orange-500 transition whitespace-nowrap">
+                    <span>食品饮料</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要内容 -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Banner 区域 -->
+        <div class="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 mb-8 text-white">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-2">限时特惠</h2>
+                    <p class="text-orange-100 mb-4">精选商品低至 5 折起</p>
+                    <button class="bg-white text-orange-500 px-6 py-2 rounded-full font-semibold hover:bg-orange-100 transition">
+                        立即抢购
+                    </button>
+                </div>
+                <div class="text-8xl">🎉</div>
+            </div>
+        </div>
+
+        <!-- 筛选和排序 -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 space-y-4 sm:space-y-0">
+            <div class="flex items-center space-x-4">
+                <span class="text-gray-600">排序:</span>
+                <select class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <option>综合排序</option>
+                    <option>价格从低到高</option>
+                    <option>价格从高到低</option>
+                    <option>销量优先</option>
+                    <option>最新上架</option>
+                </select>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="text-gray-600">价格区间:</span>
+                <input type="number" placeholder="最低价" class="w-24 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                <span class="text-gray-400">-</span>
+                <input type="number" placeholder="最高价" class="w-24 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                <button class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">
+                    筛选
+                </button>
+            </div>
+        </div>
+
+        <!-- 商品网格 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- 商品卡片 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="relative">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                        <span class="text-6xl">📱</span>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full">热卖</div>
+                    <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition hover:bg-white">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2 truncate">智能手机 Pro Max</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <span class="text-gray-400 text-sm ml-2">(128)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-orange-500">¥5999</span>
+                            <span class="text-gray-400 line-through text-sm ml-2">¥6999</span>
+                        </div>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-sm font-medium">
+                            加入购物车
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品卡片 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="relative">
+                    <div class="aspect-square bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                        <span class="text-6xl">🎧</span>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full">新品</div>
+                    <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition hover:bg-white">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2 truncate">无线降噪耳机</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>☆</span>
+                        </div>
+                        <span class="text-gray-400 text-sm ml-2">(256)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-orange-500">¥1299</span>
+                        </div>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-sm font-medium">
+                            加入购物车
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品卡片 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="relative">
+                    <div class="aspect-square bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center">
+                        <span class="text-6xl">👗</span>
+                    </div>
+                    <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition hover:bg-white">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2 truncate">时尚连衣裙</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <span class="text-gray-400 text-sm ml-2">(89)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-orange-500">¥399</span>
+                            <span class="text-gray-400 line-through text-sm ml-2">¥599</span>
+                        </div>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-sm font-medium">
+                            加入购物车
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品卡片 4 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="relative">
+                    <div class="aspect-square bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                        <span class="text-6xl">🌿</span>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">限时</div>
+                    <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition hover:bg-white">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2 truncate">天然护肤套装</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>☆</span>
+                        </div>
+                        <span class="text-gray-400 text-sm ml-2">(312)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-orange-500">¥299</span>
+                            <span class="text-gray-400 line-through text-sm ml-2">¥499</span>
+                        </div>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-sm font-medium">
+                            加入购物车
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品卡片 5 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="relative">
+                    <div class="aspect-square bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
+                        <span class="text-6xl">⌚</span>
+                    </div>
+                    <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition hover:bg-white">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2 truncate">智能运动手表</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <span class="text-gray-400 text-sm ml-2">(445)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-orange-500">¥899</span>
+                        </div>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-sm font-medium">
+                            加入购物车
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品卡片 6 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="relative">
+                    <div class="aspect-square bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                        <span class="text-6xl">🎮</span>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full">热卖</div>
+                    <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition hover:bg-white">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2 truncate">游戏手柄 Pro</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>☆</span>
+                        </div>
+                        <span class="text-gray-400 text-sm ml-2">(178)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-orange-500">¥459</span>
+                            <span class="text-gray-400 line-through text-sm ml-2">¥599</span>
+                        </div>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-sm font-medium">
+                            加入购物车
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品卡片 7 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="relative">
+                    <div class="aspect-square bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center">
+                        <span class="text-6xl">👜</span>
+                    </div>
+                    <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition hover:bg-white">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2 truncate">时尚手提包</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                        <span class="text-gray-400 text-sm ml-2">(67)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-orange-500">¥799</span>
+                        </div>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-sm font-medium">
+                            加入购物车
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品卡片 8 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300">
+                <div class="relative">
+                    <div class="aspect-square bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
+                        <span class="text-6xl">🏠</span>
+                    </div>
+                    <div class="absolute top-3 left-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full">新品</div>
+                    <button class="absolute top-3 right-3 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition hover:bg-white">
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-800 mb-2 truncate">智能家居套装</h3>
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-yellow-400">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>☆</span>
+                        </div>
+                        <span class="text-gray-400 text-sm ml-2">(203)</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-2xl font-bold text-orange-500">¥1599</span>
+                            <span class="text-gray-400 line-through text-sm ml-2">¥1999</span>
+                        </div>
+                        <button class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition text-sm font-medium">
+                            加入购物车
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分页 -->
+        <div class="flex items-center justify-center mt-12 space-x-2">
+            <button class="px-4 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-100 transition">
+                上一页
+            </button>
+            <button class="px-4 py-2 bg-orange-500 text-white rounded-lg">1</button>
+            <button class="px-4 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-100 transition">2</button>
+            <button class="px-4 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-100 transition">3</button>
+            <span class="px-2 text-gray-400">...</span>
+            <button class="px-4 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-100 transition">10</button>
+            <button class="px-4 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-100 transition">
+                下一页
+            </button>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-500">精选商城</h3>
+                    <p class="text-gray-400">为您提供优质的商品和服务，让您享受品质生活。</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">购物指南</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-orange-500 transition">购物流程</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition">支付方式</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition">配送说明</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition">售后服务</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">关于我们</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-orange-500 transition">公司简介</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition">联系我们</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition">加入我们</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition">合作伙伴</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">关注我们</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+                            <span>微信</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+                            <span>微博</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition">
+                            <span>抖音</span>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-400 text-sm">客服热线: 400-888-8888</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 精选商城. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cartButtons = document.querySelectorAll('button');
+            cartButtons.forEach(button => {
+                if (button.textContent.includes('加入购物车')) {
+                    button.addEventListener('click', function() {
+                        const originalText = this.textContent;
+                        this.textContent = '已添加 ✓';
+                        this.classList.remove('bg-orange-500', 'hover:bg-orange-600');
+                        this.classList.add('bg-green-500');
+                        
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.classList.remove('bg-green-500');
+                            this.classList.add('bg-orange-500', 'hover:bg-orange-600');
+                        }, 1500);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
